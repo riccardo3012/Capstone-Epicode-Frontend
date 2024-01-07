@@ -205,9 +205,10 @@ const Shop = () => {
           {/* User information form */}
           <Modal.Footer>
             {showPurchaseForm && (
-              <Form>
+              <Container>
+                {/* Prima riga */}
                 <Row className="mb-3">
-                  <Col xs={12} md={4} className="mb-2">
+                  <Col xs={12} md={6} className="mb-3">
                     <Form.Group controlId="formFirstName">
                       <Form.Label>First Name</Form.Label>
                       <Form.Control
@@ -218,7 +219,7 @@ const Shop = () => {
                       />
                     </Form.Group>
                   </Col>
-                  <Col xs={12} md={4} className="mb-3">
+                  <Col xs={12} md={6} className="mb-3">
                     <Form.Group controlId="formLastName">
                       <Form.Label>Last Name</Form.Label>
                       <Form.Control
@@ -229,7 +230,11 @@ const Shop = () => {
                       />
                     </Form.Group>
                   </Col>
-                  <Col xs={12} md={4} className="mb-3">
+                </Row>
+
+                {/* Seconda riga */}
+                <Row className="mb-3">
+                  <Col xs={12} md={6} className="mb-3">
                     <Form.Group controlId="formCity">
                       <Form.Label>City</Form.Label>
                       <Form.Control
@@ -240,9 +245,7 @@ const Shop = () => {
                       />
                     </Form.Group>
                   </Col>
-                </Row>
-                <Row>
-                  <Col xs={12} md={4} className="mb-3">
+                  <Col xs={12} md={6} className="mb-3">
                     <Form.Group controlId="formAddress">
                       <Form.Label>Address</Form.Label>
                       <Form.Control
@@ -253,7 +256,11 @@ const Shop = () => {
                       />
                     </Form.Group>
                   </Col>
-                  <Col xs={12} md={4} className="mb-3">
+                </Row>
+
+                {/* Terza riga */}
+                <Row className="mb-3">
+                  <Col xs={12} md={6} className="mb-3">
                     <Form.Group controlId="formEmail">
                       <Form.Label>Email</Form.Label>
                       <Form.Control
@@ -264,7 +271,7 @@ const Shop = () => {
                       />
                     </Form.Group>
                   </Col>
-                  <Col xs={12} md={4} className="mb-3">
+                  <Col xs={12} md={6} className="mb-3">
                     <Form.Group controlId="formPhoneNumber">
                       <Form.Label>Phone Number</Form.Label>
                       <Form.Control
@@ -276,10 +283,13 @@ const Shop = () => {
                     </Form.Group>
                   </Col>
                 </Row>
-                <Button variant="success" onClick={handlePurchase}>
-                  Acquista
-                </Button>
-              </Form>
+
+                <Row className="mb-3 justify-content-center">
+                  <Button variant="success" onClick={handlePurchase}>
+                    Acquista
+                  </Button>
+                </Row>
+              </Container>
             )}
           </Modal.Footer>
         </Modal>

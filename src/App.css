@@ -145,6 +145,10 @@ main {
   margin-bottom: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 24px;
+  overflow: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  border: 1px solid #ccc;
 }
 
 .post-header {
@@ -213,6 +217,10 @@ main {
 }
 .btn-fade:hover {
   opacity: 0.9;
+}
+
+.diary {
+  margin-top: 50px;
 }
 
 /*-----------------------------------Topbar---------------------------------------*/
@@ -304,10 +312,10 @@ a.dropdown-item:hover {
 
 /* Media Query per schermi più piccoli */
 .form-control {
-  width: 650px;
+  width: 220px;
 }
 
-/* Media query Footer schermi con larghezza massima di 767px ( smartphone) */
+/* Media query Footer   */
 @media (max-width: 767px) {
   .form-control {
     width: 80%;
@@ -395,43 +403,6 @@ a.dropdown-item:hover {
 /*----------------------------------Galleria--------------------------------------*/
 
 @media (max-width: 767px) {
-  .mb-4,
-  .mt-6 {
-    margin-right: 0;
-  }
-
-  .mb-4,
-  .mt-6,
-  .top-bar,
-  .footer {
-    margin-left: 0;
-  }
-
-  .col {
-    margin-bottom: 1rem;
-  }
-
-  .col-md-6,
-  .col-md-3 {
-    margin-right: 0s;
-  }
-
-  .card {
-    height: auto;
-    background: none;
-    margin-bottom: 1rem;
-  }
-
-  .custome-card {
-    margin-top: -80px;
-  }
-  hn .second-custome-card {
-    margin-top: -1px;
-  }
-
-  .mb-4:nth-child(2) {
-    margin-top: 0;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {

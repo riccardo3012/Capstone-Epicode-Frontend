@@ -16,11 +16,9 @@ const Diary = () => {
   const handleTitleChange = (e) => {
     setPostTitle(e.target.value);
   };
-
   const handleTextChange = (e) => {
     setPostText(e.target.value);
   };
-
   const handleAddPost = () => {
     const newPost = { id: Date.now(), title: postTitle, text: postText, date: new Date().toLocaleString() };
     setPosts((prevPosts) => [newPost, ...prevPosts]);
@@ -28,39 +26,32 @@ const Diary = () => {
     setPostText("");
     setShowAddPost(false);
   };
-
   const handleEditTitleChange = (e, postId) => {
     setEditingPost((prevPost) => ({ ...prevPost, title: e.target.value }));
   };
-
   const handleEditTextChange = (e, postId) => {
     setEditingPost((prevPost) => ({ ...prevPost, text: e.target.value }));
   };
-
   const handleEditPost = () => {
     //  modifica del post
     const updatedPosts = posts.map((post) => (post.id === editingPost.id ? editingPost : post));
     setPosts(updatedPosts);
     setEditingPost(null);
   };
-
   const handleDeletePost = () => {
     // eliminazione del post
     const updatedPosts = posts.filter((post) => post.id !== deletingPost.id);
     setPosts(updatedPosts);
     setDeletingPost(null);
   };
-
   const handleCancelAddPost = () => {
     setPostTitle("");
     setPostText("");
     setShowAddPost(false);
   };
-
   const buttonStyle = {
     marginRight: "10px",
   };
-
   return (
     <>
       <div
@@ -77,7 +68,7 @@ const Diary = () => {
       >
         <TopBar />
         <div>
-          <h1>Dispatcher's Diary</h1>
+          <h1 className="diary">Dispatcher's Diary</h1>
           <button className="addpostbutton" style={{ marginLeft: "100px" }} onClick={() => setShowAddPost(true)}>
             Aggiungi Post
           </button>
@@ -145,7 +136,6 @@ const Diary = () => {
           {deletingPost && (
             <div className="delete-post-section">
               <p>Sei sicuro di voler eliminare questo post?</p>
-
               <button type="button" onClick={handleDeletePost} className="delete-button red-button" style={buttonStyle}>
                 Elimina
               </button>
@@ -187,5 +177,4 @@ const Diary = () => {
     </>
   );
 };
-
 export default Diary;
