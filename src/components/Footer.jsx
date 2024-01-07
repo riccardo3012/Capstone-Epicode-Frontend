@@ -11,7 +11,7 @@ const Footer = () => {
   const socialIconStyle = {
     width: 40,
     height: 40,
-    margin: 10,
+    margin: 7,
   };
 
   const handleEmailChange = (e) => {
@@ -50,8 +50,8 @@ const Footer = () => {
 
   return (
     <footer className="text-center" style={{ backgroundColor: "#181818", color: "white" }}>
-      <Container className="p-4">
-        <section className="mb-4">
+      <Container>
+        <section>
           <SocialIcon url="https://tiktok.com/" style={socialIconStyle} />
           <SocialIcon url="https://instagram.com/" style={socialIconStyle} />
           <SocialIcon url="https://facebook.com/" style={socialIconStyle} />

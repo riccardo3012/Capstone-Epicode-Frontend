@@ -15,7 +15,7 @@ const TopBar = () => {
     <div id="mainNavigation">
       <nav role="navigation">
         <div className="py-3 text-center border-bottom">
-          <h1 style={{ fontFamily: "cinzel", color: "white" }}>Moon Dispatcher</h1>
+          <h1 style={{ fontFamily: "cinzel", color: "white", letterSpacing: "2px" }}>Moon Dispatcher</h1>
         </div>
       </nav>
       <div className="navbar-expand-md">

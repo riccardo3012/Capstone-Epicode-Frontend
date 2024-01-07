@@ -64,11 +64,9 @@ const Diary = () => {
   return (
     <>
       <div
-        className="about-container"
         style={{
           backgroundImage: `url(${sfondoNero})`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -78,8 +76,8 @@ const Diary = () => {
         }}
       >
         <TopBar />
-        <div className="title-and-button">
-          <h1 style={{ marginTop: "190px" }}>Dispatcher's Diary</h1>
+        <div>
+          <h1>Dispatcher's Diary</h1>
           <button className="addpostbutton" style={{ marginLeft: "100px" }} onClick={() => setShowAddPost(true)}>
             Aggiungi Post
           </button>

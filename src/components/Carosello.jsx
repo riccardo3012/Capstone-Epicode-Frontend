@@ -26,8 +26,12 @@ const Carosello = () => {
     height: "auto",
   };
 
+  const carouselStyle = {
+    Height: "50vh",
+  };
+
   return (
-    <Carousel>
+    <Carousel style={carouselStyle}>
       <Carousel.Item interval={9000}>
         <img src={Img1} alt="First slide" style={imgStyle} />
         <Carousel.Caption></Carousel.Caption>

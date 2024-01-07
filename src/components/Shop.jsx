@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { Card, Button, Container, Row, Col, Modal, Form } from "react-bootstrap";
 import TopBar from "./Topbar";
 import Footer from "./Footer";
-import ImgDisco from "../assets/disco.png";
+import ImgDisco from "../assets/moon dispatcher.jpg";
 import ImgPoster1 from "../assets/Answering Machine/IMG_2794.jpeg";
 import ImgPoster2 from "../assets/Imaginary Estate/IMG_5951.jpeg";
-import ImgPoster3 from "../assets/The Suburbs/IMG_5495.jpeg";
+import ImgPoster3 from "../assets/The Suburbs/IMG_5655.jpeg";
 import sfondo from "../assets/sfondoNeroCard.png";
 import { ShoppingCart } from "lucide-react";
 import "../App.css";
@@ -62,7 +62,6 @@ const Shop = () => {
     }
 
     // Se il carrello non è vuoto e tutti i campi del form sono compilati, procedi con l'acquisto
-    // Aggiungi qui la logica per completare l'acquisto, ad esempio l'invio dei dati al server
     alert("Ordine effettuato!");
     setUserInfo({
       firstName: "",
@@ -87,7 +86,7 @@ const Shop = () => {
           {/* Prima riga con una sola card */}
           <Row>
             <Col>
-              <Card style={{ width: "18rem", marginTop: "200px" }} bg="dark" text="light">
+              <Card className="disco-card" style={{ width: "18rem", marginTop: "200px" }} bg="dark" text="light">
                 <Card.Img variant="top" src={ImgDisco} style={{ height: "200px", objectFit: "cover" }} />
                 <Card.Body>
                   <Card.Title>Unspecified Pictures</Card.Title>
@@ -105,7 +104,7 @@ const Shop = () => {
           </Row>
 
           {/* Seconda riga con tre card */}
-          <Row style={{ marginTop: "50px", marginBottom: "50px" }}>
+          <Row style={{ marginTop: "40px", marginBottom: "50px" }}>
             <Col>
               <Card style={{ width: "18rem" }} bg="dark" text="light">
                 <Card.Img variant="top" src={ImgPoster1} style={{ height: "200px", objectFit: "cover" }} />
@@ -157,27 +156,23 @@ const Shop = () => {
           </Row>
 
           {/* Icona del carrello in fondo alla pagina */}
-          <Row style={{ marginBottom: "60px", display: "flex", justifyContent: "flex-end", alignItems: "center" }}>
-            <div
-              style={{
-                cursor: "pointer",
-                transition: "color 0.3s",
-                marginRight: "10px",
-                display: "flex",
-                alignItems: "center",
-              }}
-              onClick={handleShowCart}
-              onMouseEnter={(e) => (e.target.style.color = "#4CAF50")}
-              onMouseLeave={(e) => (e.target.style.color = "#ffffff")}
-            >
-              <ShoppingCart
-                size={46}
-                color="#ffffff"
-                style={{ marginTop: "20px", right: "10px" }}
+          <Row className="justify-content-center mb-5">
+            <Col xs="auto">
+              <div
+                style={{
+                  cursor: "pointer",
+                  transition: "color 0.3s",
+                  display: "flex",
+                  alignItems: "center",
+                }}
                 onClick={handleShowCart}
-              />
-              {cartCount > 0 && <span style={{ marginLeft: "5px", color: "white" }}>{cartCount}</span>}
-            </div>
+                onMouseEnter={(e) => (e.target.style.color = "#4CAF50")}
+                onMouseLeave={(e) => (e.target.style.color = "#ffffff")}
+              >
+                <ShoppingCart size={46} color="#ffffff" onClick={handleShowCart} />
+                {cartCount > 0 && <span style={{ color: "white", marginLeft: "5px" }}>{cartCount}</span>}
+              </div>
+            </Col>
           </Row>
         </Container>
         <Footer />

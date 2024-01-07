@@ -38,23 +38,22 @@ const Gallery = () => {
       }}
     >
       <TopBar className="top-bar" />
-
-      <Row className="justify-content-center mt-5">
+      <Row className="justify-content-center align-items-center mt-5">
         {/* Prima riga */}
-        <Col md={3} className="mb-4 mt-6" style={{ marginTop: "190px", marginRight: "150px" }}>
-          <Link to="/galleryuno" style={linkStyle}>
-            <Card style={cardStyle}>
-              <Card.Img variant="top" src={Img1} />
+        <Col md={3} className="mb-4" style={{ marginRight: "150px", marginTop: "150px" }}>
+          <Link to="/gallerytre" style={linkStyle}>
+            <Card className="second-custome-card" style={cardStyle}>
+              <Card.Img variant="top" src={Img2} />
               <Card.Body className="text-center">
                 <Card.Text style={textStyle}>Answering Machine</Card.Text>
               </Card.Body>
             </Card>
           </Link>
         </Col>
-        <Col md={3} className="mb-4 mt-6" style={{ marginTop: "190px", marginRight: "20px" }}>
-          <Link to="/gallerydue" style={linkStyle}>
+        <Col md={3} className="mb-4" style={{ marginRight: "20px", marginTop: "190px" }}>
+          <Link to="/galleryquattro" style={linkStyle}>
             <Card style={cardStyle}>
-              <Card.Img variant="top" src={Img2} />
+              <Card.Img variant="top" src={Img1} />
               <Card.Body className="text-center">
                 <Card.Text style={textStyle}>Confidential</Card.Text>
               </Card.Body>
@@ -62,12 +61,11 @@ const Gallery = () => {
           </Link>
         </Col>
       </Row>
-
       <Row className="justify-content-center mt-4 mb-5">
         {/* Seconda riga */}
         <Col md={3} className="mb-4" style={{ marginRight: "150px" }}>
           <Link to="/gallerytre" style={linkStyle}>
-            <Card style={cardStyle}>
+            <Card className="second-custome-card" style={cardStyle}>
               <Card.Img variant="top" src={Img3} />
               <Card.Body className="text-center">
                 <Card.Text style={textStyle}>Imaginary Estate</Card.Text>

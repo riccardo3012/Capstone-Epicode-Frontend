@@ -59,8 +59,8 @@ const Contact = () => {
                 fontFamily: "Lastica",
               }}
             >
-              <Row style={{ marginLeft: "20px" }}>Nello Taver</Row>
-              <Row>NelloTaver@gmail.com</Row>
+              <Row style={{ marginLeft: "20px" }}>Edoardo Certelli</Row>
+              <Row>edoardocertelli@gmail.com</Row>
             </div>
           </Col>
         </Row>
@@ -95,8 +95,8 @@ const Contact = () => {
                 fontFamily: "Lastica",
               }}
             >
-              <Row style={{ marginLeft: "20px" }}>Nello Taver</Row>
-              <Row>NelloTaver@gmail.com</Row>
+              <Row style={{ marginLeft: "20px" }}>Edoardo Certelli</Row>
+              <Row>edoardocertelli@gmail.com</Row>
             </div>
           </Col>
         </Row>
@@ -131,9 +131,9 @@ const Contact = () => {
                 fontFamily: "",
               }}
             >
-              <Row style={{ marginLeft: "45px" }}>Italy</Row>
-              <Row style={{ marginLeft: "22px" }}>Nello Taver</Row>
-              <Row style={{ marginBottom: "3px" }}>NelloTaver@gmail.com</Row>
+              <Row style={{ marginLeft: "63px" }}>Italy</Row>
+              <Row style={{ marginLeft: "22px" }}>Edoardo Certelli</Row>
+              <Row style={{ marginBottom: "3px" }}>edoardocertelli@gmail.com</Row>
             </div>
           </Col>
         </Row>
