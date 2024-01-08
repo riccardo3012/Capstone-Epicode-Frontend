@@ -20,11 +20,13 @@ const About = () => {
       <TopBar />
 
       <Container className="about-container text-center">
-        <p className="about-column ">
-          Based in Rome, Italy, Moon Dispatcher’s world only exists in a vacuum. The parallel reality of Unspecified
-          Pictures, the first full-length record of the project, is a mosaic of dreamlike lives always too ephemeral to
-          be grasped but at the same time as real and as rough as they can get.
-        </p>
+        <div className="about-p">
+          <p className="about-column ">
+            Based in Rome, Italy, Moon Dispatcher’s world only exists in a vacuum. The parallel reality of Unspecified
+            Pictures, the first full-length record of the project, is a mosaic of dreamlike lives always too ephemeral
+            to be grasped but at the same time as real and as rough as they can get.
+          </p>
+        </div>
         <p className="about-column ">
           Heavily influenced by the work of Radiohead, Jeff Buckley, Philip Glass and David Bowie, Unspecified Pictures
           is a journey that takes place in a fugacious highway, completely manufactured by both the listener and the

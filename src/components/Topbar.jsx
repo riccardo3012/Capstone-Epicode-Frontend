@@ -49,7 +49,7 @@ const TopBar = () => {
             </li>
             <li className="nav-item">
               <Link to={"/shop"} className={loc.pathname === "/shop" ? "selected" : ""}>
-                Shop
+                Store
               </Link>
             </li>
             <li className="nav-item">

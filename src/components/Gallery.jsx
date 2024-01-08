@@ -23,10 +23,6 @@ const Gallery = () => {
     color: "white",
   };
 
-  const linkStyle = {
-    textDecoration: "none",
-  };
-
   return (
     <div
       className="d-flex flex-column"
@@ -39,53 +35,53 @@ const Gallery = () => {
     >
       <TopBar />
 
-      <Row className="justify-content-center" style={{ marginTop: "190px" }}>
-        {/* Prima riga */}
-        <Col md={3} style={{ marginRight: "20px" }}>
-          <Link to="/gallerytre" style={linkStyle}>
-            <Card style={cardStyle}>
-              <Card.Img variant="top" src={Img2} />
-              <Card.Body className="text-center">
-                <Card.Text style={textStyle}>Answering Machine</Card.Text>
-              </Card.Body>
-            </Card>
-          </Link>
-        </Col>
-        <Col md={3} style={{ marginLeft: "20px" }}>
-          <Link to="/galleryquattro" style={linkStyle}>
-            <Card style={cardStyle}>
-              <Card.Img variant="top" src={Img1} />
-              <Card.Body className="text-center">
-                <Card.Text style={textStyle}>Confidential</Card.Text>
-              </Card.Body>
-            </Card>
-          </Link>
-        </Col>
-      </Row>
+      <div className="container">
+        <div className="row d-flex justify-content-center custom-margin">
+          <Col>
+            <Link to="/galleryuno" style={{ textDecoration: "none" }}>
+              <Card className="card mx-auto" style={cardStyle}>
+                <Card.Img variant="top" src={Img2} />
+                <Card.Body className="text-center">
+                  <Card.Text style={textStyle}>Imaginary Estate</Card.Text>
+                </Card.Body>
+              </Card>
+            </Link>
+          </Col>
+          <Col>
+            <Link to="/gallerydue" style={{ textDecoration: "none" }}>
+              <Card className="card mx-auto" style={cardStyle}>
+                <Card.Img variant="top" src={Img1} />
+                <Card.Body className="text-center">
+                  <Card.Text style={textStyle}>Answering Machine</Card.Text>
+                </Card.Body>
+              </Card>
+            </Link>
+          </Col>
+        </div>
 
-      <Row className="justify-content-center mt-4 mb-5">
-        {/* Seconda riga */}
-        <Col md={3} style={{ marginRight: "20px" }}>
-          <Link to="/gallerytre" style={linkStyle}>
-            <Card style={cardStyle}>
-              <Card.Img variant="top" src={Img3} />
-              <Card.Body className="text-center">
-                <Card.Text style={textStyle}>Imaginary Estate</Card.Text>
-              </Card.Body>
-            </Card>
-          </Link>
-        </Col>
-        <Col md={3} style={{ marginLeft: "20px" }}>
-          <Link to="/galleryquattro" style={linkStyle}>
-            <Card style={cardStyle}>
-              <Card.Img variant="top" src={Img4} />
-              <Card.Body className="text-center">
-                <Card.Text style={textStyle}>The Basement</Card.Text>
-              </Card.Body>
-            </Card>
-          </Link>
-        </Col>
-      </Row>
+        <div className="row d-flex justify-content-center">
+          <Col>
+            <Link to="/gallerytre" style={{ textDecoration: "none" }}>
+              <Card className="card mx-auto" style={cardStyle}>
+                <Card.Img variant="top" src={Img3} />
+                <Card.Body className="text-center">
+                  <Card.Text style={textStyle}>Wilderness</Card.Text>
+                </Card.Body>
+              </Card>
+            </Link>
+          </Col>
+          <Col>
+            <Link to="/galleryquattro" style={{ textDecoration: "none" }}>
+              <Card className="card mx-auto" style={cardStyle}>
+                <Card.Img variant="top" src={Img4} />
+                <Card.Body className="text-center">
+                  <Card.Text style={textStyle}>Confidential</Card.Text>
+                </Card.Body>
+              </Card>
+            </Link>
+          </Col>
+        </div>
+      </div>
 
       <Footer />
     </div>
